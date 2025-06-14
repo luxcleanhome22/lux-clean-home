@@ -14,7 +14,7 @@
   <header>
   <nav class="navbar">
    <div class="logo">
-  <img src="logo.png" alt="Lux Clean Home logo" class="logo-img">
+  <img src="img/logo.png" alt="Lux Clean Home logo" class="logo-img">
   <span class="logo-text">Lux Clean Home</span>
 </div>
 
@@ -27,6 +27,10 @@
     </ul>
 
     <ul class="social-links">
+      <!-- Botón hamburguesa -->
+<div class="hamburger" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
       <li><a href="https://www.instagram.com/luxcleanhome/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
       <li><a href="https://www.tiktok.com/@lux.clean.home" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
       <li><a href="https://wa.me/51982218148" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
@@ -62,7 +66,7 @@
 
     <div class="video-nosotros">
       <!-- Reemplaza el src con el link correcto a tu video -->
-      <video src="video1.mp4" controls muted autoplay loop></video>
+      <video src="img/video1.mp4" controls muted autoplay loop></video>
     </div>
   </div>
 </section>
@@ -93,17 +97,17 @@
   <section id="galeria" class="section galeria-section">
     <h2>Galería</h2>
     <div class="galeria-grid">
-      <img src="colchon1.jpg" alt="Trabajo 1" />
-      <img src="sofa1.jpg" alt="Trabajo 2" />
-      <img src="colchon2.jpg" alt="Trabajo 3" />
-      <img src="sofa2.png" alt="Trabajo 4" />
+      <img src="img/colchon1.jpg" alt="Trabajo 1" />
+      <img src="img/sofa1.jpg" alt="Trabajo 2" />
+      <img src="img/colchon2.jpg" alt="Trabajo 3" />
+      <img src="img/sofa2.png" alt="Trabajo 4" />
     </div>
   </section>
 
   <!-- CONTACTO -->
   <section id="contacto" class="section contacto-section">
     <h2>Contáctanos</h2>
-    <h3>Escríbenos por WhatsApp o llamanos directamente al <br> +51 982218148 </h3>
+    <h3>Escríbenos por WhatsApp o llamanos directamente al <br> +51 982 218 148</h3>
     <br>
     <!-- Botón de WhatsApp en la sección de contacto -->
     <a href="https://wa.me/51982218148?text=Hola%2C%20me%20interesa%20cotizar%20una%20limpieza%20con%20Lux%20Clean%20Home" target="_blank" class="btn whatsapp-btn">
@@ -117,6 +121,12 @@
       history.replaceState(null, null, ' ');
     }
   </script>
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
 
 </body>
 </html>
