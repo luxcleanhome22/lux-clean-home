@@ -8,20 +8,15 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F8F9FA
-;
+  background-color: #F8F9FA;
   color: #333;
-}
-
-.navbar {
-  flex-wrap: wrap;
 }
 
 /* Navbar */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* separa logo, menú y redes */
+  justify-content: space-between;
   padding: 15px 40px;
   background-color: #4d4339;
   position: fixed;
@@ -29,9 +24,10 @@ html {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
 }
 
-/* Logo a la izquierda */
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -43,7 +39,7 @@ html {
 }
 
 .logo-img {
-  height: 50px; /* ajusta el tamaño según tu imagen */
+  height: 50px;
   width: auto;
 }
 
@@ -51,13 +47,12 @@ html {
   display: inline-block;
 }
 
-
-/* Menú centrado */
+/* Menú principal */
 .nav-links {
   display: flex;
   gap: 50px;
   list-style: none;
-  margin: 0 auto; /* esto centra el menú */
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -73,7 +68,7 @@ html {
   color: #f4b41a;
 }
 
-/* Escritorio */
+/* Redes sociales escritorio */
 .social-links {
   list-style: none;
   display: flex;
@@ -102,70 +97,14 @@ html {
   cursor: pointer;
 }
 
-/* Ocultar iconos móviles en escritorio */
-.social-mobile {
-  display: none;
-}
-
-/* Móvil */
-@media (max-width: 768px) {
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    background-color: #4d4339;
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  /* Mostrar iconos móviles dentro del menú */
-  .social-mobile {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
-  }
-
-  .social-mobile a {
-    font-size: 1.5rem;
-    color: #f8f8f8;
-    background-color: #4d4339;
-    padding: 10px 14px;
-    border-radius: 10px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .social-mobile a:hover {
-    background-color: #f4b41a;
-    color: #2f4050;
-  }
-
-  /* Ocultar los iconos de escritorio en móvil */
-  .social-links {
-    display: none;
-  }
-}
-
-/* Redes sociales flotando en escritorio y móvil */
+/* Iconos flotantes superior móvil */
 .social-top {
-  position: fixed; /* siempre visible */
-  top: 10px;       /* desde arriba */
-  right: 20px;     /* desde la derecha */
+  position: fixed;
+  top: 80px;
+  right: 20px;
   display: flex;
   gap: 15px;
-  z-index: 1001;   /* encima de todo */
+  z-index: 1001;
 }
 
 .social-top a {
@@ -183,29 +122,13 @@ html {
   cursor: pointer;
 }
 
-/* Opcional: ajustar tamaño en móviles */
-@media (max-width: 768px) {
-  .social-top {
-    top: 80px;      /* si tu navbar es más alto */
-    right: 20px;
-    gap: 12px;
-  }
-
-  .social-top a {
-    font-size: 1.4rem;
-    padding: 8px 10px;
-  }
-}
-
-
-/* Secciones comunes */
+/* Home */
 .section {
-  padding: 120px 20px 60px; /* deja espacio para navbar fijo */
+  padding: 120px 20px 60px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* HOME */
 .home-section {
   background: url('fondo.jpg') no-repeat center center/cover;
   color: white;
@@ -235,14 +158,18 @@ html {
 }
 
 /* Botones */
+.btn, .whatsapp-btn-home, .whatsapp-btn {
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
 .btn {
   background-color: #f4b41a;
   color: #2f4050;
   padding: 12px 30px;
-  font-weight: 700;
-  text-decoration: none;
   border-radius: 4px;
-  transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -250,196 +177,22 @@ html {
   color: white;
 }
 
-/* NOSOTROS */
-.nosotros-section h2 {
-  font-size: 2rem;
-  color: #2f4050;
-  margin-bottom: 3%;
-  font-weight: 700;
-}
-
-.nosotros-section p {
-  font-size: 1.25rem;
-  max-width: 1000px;
-  line-height: 1.6;
-}
-
-.nosotros-section ol li {
-  font-size: 1.2rem;
-  margin-bottom: 1.2em;
-  line-height: 1.7;
-}
-
-/* SERVICIOS */
-
-.servicios-section {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 120px 20px 60px;
-}
-
-.servicios-section h2 {
-  font-size: 2rem;
-  color: #2f4050;
-  margin-bottom: 25px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.servicios-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: nowrap; /* ❗ IMPORTANTE: evita que bajen */
-}
-
-.servicio-item {
-  width: 30%; /* antes 320px; esto lo hace más flexible */
-  min-width: 300px; /* opcional para que no se achiquen tanto */
-  background-color: white;
-  padding: 25px 30px;
-  border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.servicio-item:hover {
-  transform: translateY(-10px);
-}
-
-.servicio-item h2 {
-  color: #f4b41a;
-  margin-bottom: 10px;
-  font-weight: 700;
-  width: 100%;
-  text-align: left; /* texto alineado a la izquierda */
-} 
-
-.servicio-item p {
-  font-size: 1.1rem; /* antes 1rem */
-  line-height: 1.6;
-  color: #555;
-}
-
-.servicio-icon {
-  font-size: 3.5rem;
-  color: #f4b41a;
-  margin-bottom: 15px;
-  display: block;
-  text-align: center;
-  transition: color 0.3s;
-}
-
-.servicio-item:hover .servicio-icon {
-  color: #d29c15;
-}
-
-/* GALERIA */
-.galeria-section h2 {
-  font-size: 2rem;
-  color: #2f4050;
-  margin-bottom: 20px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 120px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.galeria-grid img {
-  width: 120%;
-  border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  transition: transform 0.3s;
-}
-
-.galeria-grid img {
-  width: 100%;
-}
-
-
-.galeria-grid img:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-/* CONTACTO */
-.contacto-section {
-  text-align: center;
-  padding-bottom: 80px;
-}
-
-.contacto-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #2f4050;
-  font-weight: 700;
-}
-
-.contacto-section p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
-
-.whatsapp-btn {
-  display: inline-block;
+.whatsapp-btn-home, .whatsapp-btn {
   background-color: #25d366;
   color: white !important;
-  font-weight: 700;
-  padding: 14px 40px;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.6);
-  transition: background-color 0.3s;
-}
-
-.whatsapp-btn:hover {
-  background-color: #1ebe57;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .servicios-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links {
-    gap: 15px;
-  }
-}
-
-.whatsapp-btn-home {
-  background-color: #25d366;
-  color: white !important;
-  font-weight: 700;
   padding: 14px 35px;
-  border-radius: 50px;
-  text-decoration: none;
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.6);
-  transition: background-color 0.3s;
-  font-size: 1.1rem;
 }
 
-.whatsapp-btn-home:hover {
+.whatsapp-btn-home:hover, .whatsapp-btn:hover {
   background-color: #1ebe57;
 }
 
-.whatsapp-btn i,
-.whatsapp-btn-home i {
+.whatsapp-btn i, .whatsapp-btn-home i {
   margin-right: 10px;
 }
 
-/*NOSOTROS VIDEO*/
-
+/* Nosotros */
 .nosotros-contenido {
   display: flex;
   flex-wrap: wrap;
@@ -461,34 +214,112 @@ html {
 .video-nosotros video {
   aspect-ratio: 9 / 16;
   object-fit: cover;
-}
-
-.video-nosotros video {
   width: 100%;
   max-width: 300px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
-
-@media (max-width: 768px) {
-  .nosotros-contenido {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .texto-nosotros, .video-nosotros {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .video-nosotros video {
-    max-width: 100%;
-  }
+/* Servicios */
+.servicios-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
 }
 
-/* Hamburger (menú móvil) */
+.servicios-section h2 {
+  font-size: 2rem;
+  color: #2f4050;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.servicios-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+.servicio-item {
+  width: 30%;
+  min-width: 300px;
+  background-color: white;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s;
+}
+
+.servicio-item:hover {
+  transform: translateY(-10px);
+}
+
+.servicio-item h2 {
+  color: #f4b41a;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: left;
+} 
+
+.servicio-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.servicio-icon {
+  font-size: 3.5rem;
+  color: #f4b41a;
+  margin-bottom: 15px;
+  display: block;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.servicio-item:hover .servicio-icon {
+  color: #d29c15;
+}
+
+/* Galería */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 120px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.galeria-grid img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Contacto */
+.contacto-section {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.contacto-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2f4050;
+  font-weight: 700;
+}
+
+/* Hamburger */
 .hamburger {
   display: none;
   font-size: 1.8rem;
@@ -496,7 +327,10 @@ html {
   cursor: pointer;
 }
 
+/* Responsive Móvil */
 @media (max-width: 768px) {
+
+  /* Navbar menú */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -516,22 +350,12 @@ html {
     display: block;
   }
 
+  /* Ocultar iconos escritorio */
   .social-links {
     display: none;
   }
-}
 
-@media (max-width: 768px) {
-  .servicios-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .servicio-item {
-    width: 90%;
-  }
-
+  /* Ajustes Home */
   .home-content h1 {
     font-size: 2rem;
   }
@@ -544,8 +368,46 @@ html {
     font-size: 1rem;
     padding: 10px 25px;
   }
-} 
 
+  /* Servicios vertical */
+  .servicios-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .servicio-item {
+    width: 90%;
+  }
+
+  /* Nosotros video */
+  .nosotros-contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto-nosotros, .video-nosotros {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .video-nosotros video {
+    max-width: 100%;
+  }
+
+  /* Iconos flotantes más compactos */
+  .social-top {
+    top: 100px;
+    gap: 12px;
+  }
+
+  .social-top a {
+    font-size: 1.4rem;
+    padding: 8px 10px;
+  }
+}
+
+/* Muy pequeños */
 @media (max-width: 480px) {
   .home-content h1 {
     font-size: 1.6rem;
@@ -566,6 +428,8 @@ html {
     font-size: 1rem;
   }
 }
+
+
 
 
 
