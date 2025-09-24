@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="icon" href="logotopo.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lux Clean Home</title>
+  <link rel="icon" href="logotopo.png" type="image/png">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17595978547"></script>
   <script>
@@ -20,20 +21,19 @@
 
 <header>
   <nav class="navbar">
-   <div class="logo">
-  <img src="logo.png" alt="Lux Clean Home logo" class="logo-img">
-  <span class="logo-text">Lux Clean Home</span>
-</div>
-
-<div class="header-social">
-  <a href="https://www.instagram.com/luxcleanhome/" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.tiktok.com/@lux.clean.home" target="_blank"><i class="fab fa-tiktok"></i></a>
-  <a href="https://wa.me/51982218148" target="_blank"><i class="fab fa-whatsapp"></i></a>
-</div>
-
+    <div class="logo">
+      <img src="logo.png" alt="Lux Clean Home logo" class="logo-img">
+      <span class="logo-text">LUX CLEAN HOME</span>
     </div>
 
-    <!-- Menú principal -->
+    <!-- Redes sociales debajo del título -->
+    <div class="header-social">
+      <a href="https://www.instagram.com/luxcleanhome/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@lux.clean.home" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://wa.me/51982218148" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <!-- Menú principal (opcional, centrado) -->
     <ul class="nav-links">
       <li><a href="#home">Inicio</a></li>
       <li><a href="#nosotros">Proceso</a></li>
@@ -41,26 +41,7 @@
       <li><a href="#galeria">Galería</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
-
-    <!-- Iconos escritorio -->
-    <ul class="social-links">
-      <li><a href="https://www.instagram.com/luxcleanhome/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="https://www.tiktok.com/@lux.clean.home" target="_blank"><i class="fab fa-tiktok"></i></a></li>
-      <li><a href="https://wa.me/51982218148" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </div>
   </nav>
-
-  <!-- Iconos móviles debajo del logo -->
-  <div class="social-mobile">
-    <a href="https://www.instagram.com/luxcleanhome/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@lux.clean.home" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://wa.me/51982218148" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  </div>
 </header>
 
 <!-- HOME -->
@@ -68,6 +49,7 @@
   <div class="home-content">
     <h1>PUREZA Y ELEGANCIA EN CADA RINCON DE TU HOGAR</h1>
     <p>Servicio a domicilio de limpieza profunda y desinfección <br>  de muebles, colchones y más</p>
+    <!-- Botón de WhatsApp (mensaje predeterminado) -->
     <a href="https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio" target="_blank" class="btn whatsapp-btn-home">
       <i class="fab fa-whatsapp"></i> CONTÁCTANOS
     </a>
@@ -130,31 +112,22 @@
 <!-- CONTACTO -->
 <section id="contacto" class="section contacto-section">
   <h2>Contáctanos</h2>
-  <h3>Escríbenos por WhatsApp o llamanos directamente al <br> +51 982 218 148</h3>
+  <h3>Escríbenos por WhatsApp o llámanos directamente al <br> +51 982 218 148</h3>
   <br>
   <a href="https://wa.me/51982218148?text=Hola%2C%20me%20interesa%20cotizar%20una%20limpieza%20con%20Lux%20Clean%20Home" target="_blank" class="btn whatsapp-btn">
     <i class="fab fa-whatsapp"></i> CONTACTANOS
   </a>
 </section>
 
+<!-- SCRIPT PARA EVITAR SCROLL AL RECARGAR -->
 <script>
   if (window.location.hash) {
     history.replaceState(null, null, ' ');
-  }
-
-  function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
   }
 </script>
 
 </body>
 </html>
-
-
-
-
-
 
 
 
