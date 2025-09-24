@@ -449,6 +449,38 @@ html {
   }
 }
 
+@media (max-width: 768px) {
+  /* Logo y redes sociales en columna */
+  .logo {
+    flex-direction: column;   /* título arriba, redes abajo */
+    align-items: center;      /* centra todo */
+    gap: 10px;                /* separación entre título y redes */
+  }
+
+  /* Alinea los iconos en fila debajo del título */
+  .header-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* espacio entre los iconos */
+  }
+
+  /* Mantener color y fondo de los iconos como en escritorio */
+  .header-social a {
+    color: #f8f8f8;
+    background-color: #4d4339;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .header-social a:hover {
+    background-color: #f4b41a;
+    color: #2f4050;
+  }
+}
+
+
 
 
 
