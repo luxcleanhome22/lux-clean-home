@@ -371,27 +371,27 @@ html {
     display: none;
   }
 
-  /* Header social debajo del título */
-  .header-social {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-  }
+  /* Redes sociales debajo del título en móvil */
+.header-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0 20px 0; /* separación debajo del título */
+}
 
-  .header-social a {
-    font-size: 1.6rem;
-    color: #f8f8f8;
-    background-color: #4d4339;
-    padding: 10px 12px;
-    border-radius: 10px;
-    transition: background-color 0.3s, color 0.3s;
-  }
+.header-social a {
+  font-size: 1.6rem;
+  color: #f8f8f8; /* mismo color que escritorio */
+  background-color: #4d4339; /* mismo fondo que escritorio */
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-  .header-social a:hover {
-    background-color: #f4b41a;
-    color: #2f4050;
-  }
+.header-social a:hover {
+  background-color: #f4b41a;
+  color: #2f4050;
+}
 
   /* Ocultar flotantes en móvil */
   .social-top {
@@ -448,6 +448,7 @@ html {
     font-size: 1rem;
   }
 }
+
 
 
 
