@@ -35,7 +35,6 @@ html {
   font-size: 1.5rem;
   font-weight: 700;
   color: #f4b41a;
-  flex-shrink: 0;
 }
 
 .logo-img {
@@ -60,22 +59,19 @@ html {
   color: #f8f8f8;
   text-decoration: none;
   font-weight: 750;
-  transition: color 0.3s;
   font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
 .nav-links li a:hover {
   color: #f4b41a;
 }
 
-/* Redes sociales escritorio */
+/* Escritorio: redes sociales */
 .social-links {
   list-style: none;
   display: flex;
   gap: 50px;
-  margin: 0;
-  padding: 0;
-  flex-shrink: 0;
 }
 
 .social-links li a {
@@ -97,10 +93,10 @@ html {
   cursor: pointer;
 }
 
-/* Iconos flotantes superior móvil */
+/* Redes sociales flotantes (escritorio) */
 .social-top {
   position: fixed;
-  top: 80px;
+  top: 10px;
   right: 20px;
   display: flex;
   gap: 15px;
@@ -122,13 +118,14 @@ html {
   cursor: pointer;
 }
 
-/* Home */
+/* Secciones */
 .section {
   padding: 120px 20px 60px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
+/* HOME */
 .home-section {
   background: url('fondo.jpg') no-repeat center center/cover;
   color: white;
@@ -158,18 +155,14 @@ html {
 }
 
 /* Botones */
-.btn, .whatsapp-btn-home, .whatsapp-btn {
-  font-weight: 700;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
 .btn {
   background-color: #f4b41a;
   color: #2f4050;
   padding: 12px 30px;
+  font-weight: 700;
+  text-decoration: none;
   border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -177,22 +170,32 @@ html {
   color: white;
 }
 
-.whatsapp-btn-home, .whatsapp-btn {
+/* WhatsApp */
+.whatsapp-btn,
+.whatsapp-btn-home {
+  display: inline-block;
   background-color: #25d366;
   color: white !important;
-  padding: 14px 35px;
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 50px;
+  text-decoration: none;
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.6);
+  transition: background-color 0.3s;
+  font-size: 1.1rem;
 }
 
-.whatsapp-btn-home:hover, .whatsapp-btn:hover {
+.whatsapp-btn:hover,
+.whatsapp-btn-home:hover {
   background-color: #1ebe57;
 }
 
-.whatsapp-btn i, .whatsapp-btn-home i {
+.whatsapp-btn i,
+.whatsapp-btn-home i {
   margin-right: 10px;
 }
 
-/* Nosotros */
+/* NOSOTROS */
 .nosotros-contenido {
   display: flex;
   flex-wrap: wrap;
@@ -220,7 +223,7 @@ html {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Servicios */
+/* SERVICIOS */
 .servicios-section {
   max-width: 1300px;
   margin: 0 auto;
@@ -249,10 +252,10 @@ html {
   padding: 25px 30px;
   border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: transform 0.3s;
 }
 
 .servicio-item:hover {
@@ -263,8 +266,9 @@ html {
   color: #f4b41a;
   margin-bottom: 10px;
   font-weight: 700;
+  width: 100%;
   text-align: left;
-} 
+}
 
 .servicio-item p {
   font-size: 1.1rem;
@@ -285,7 +289,15 @@ html {
   color: #d29c15;
 }
 
-/* Galería */
+/* GALERIA */
+.galeria-section h2 {
+  font-size: 2rem;
+  color: #2f4050;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
 .galeria-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -306,7 +318,7 @@ html {
   cursor: pointer;
 }
 
-/* Contacto */
+/* CONTACTO */
 .contacto-section {
   text-align: center;
   padding-bottom: 80px;
@@ -319,7 +331,12 @@ html {
   font-weight: 700;
 }
 
-/* Hamburger */
+.contacto-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Hamburger (menú móvil) */
 .hamburger {
   display: none;
   font-size: 1.8rem;
@@ -327,10 +344,10 @@ html {
   cursor: pointer;
 }
 
-/* Responsive Móvil */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
 
-  /* Navbar menú */
+  /* Navbar móvil */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -350,26 +367,38 @@ html {
     display: block;
   }
 
-  /* Ocultar iconos escritorio */
   .social-links {
     display: none;
   }
 
-  /* Ajustes Home */
-  .home-content h1 {
-    font-size: 2rem;
+  /* Header social debajo del título */
+  .header-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
   }
 
-  .home-content p {
-    font-size: 1rem;
+  .header-social a {
+    font-size: 1.6rem;
+    color: #f8f8f8;
+    background-color: #4d4339;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
   }
 
-  .btn, .whatsapp-btn-home {
-    font-size: 1rem;
-    padding: 10px 25px;
+  .header-social a:hover {
+    background-color: #f4b41a;
+    color: #2f4050;
   }
 
-  /* Servicios vertical */
+  /* Ocultar flotantes en móvil */
+  .social-top {
+    display: none;
+  }
+
+  /* Ajustes para servicios y textos */
   .servicios-grid {
     flex-direction: column;
     align-items: center;
@@ -380,34 +409,25 @@ html {
     width: 90%;
   }
 
-  /* Nosotros video */
-  .nosotros-contenido {
-    flex-direction: column;
-    align-items: center;
+  .home-content h1 {
+    font-size: 2rem;
   }
 
-  .texto-nosotros, .video-nosotros {
-    flex: 1 1 100%;
-    max-width: 100%;
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .btn,
+  .whatsapp-btn-home {
+    font-size: 1rem;
+    padding: 10px 25px;
   }
 
   .video-nosotros video {
     max-width: 100%;
   }
-
-  /* Iconos flotantes más compactos */
-  .social-top {
-    top: 100px;
-    gap: 12px;
-  }
-
-  .social-top a {
-    font-size: 1.4rem;
-    padding: 8px 10px;
-  }
 }
 
-/* Muy pequeños */
 @media (max-width: 480px) {
   .home-content h1 {
     font-size: 1.6rem;
@@ -428,6 +448,8 @@ html {
     font-size: 1rem;
   }
 }
+
+
 
 
 
