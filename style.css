@@ -158,6 +158,46 @@ html {
   }
 }
 
+/* Redes sociales flotando en escritorio y móvil */
+.social-top {
+  position: fixed; /* siempre visible */
+  top: 10px;       /* desde arriba */
+  right: 20px;     /* desde la derecha */
+  display: flex;
+  gap: 15px;
+  z-index: 1001;   /* encima de todo */
+}
+
+.social-top a {
+  font-size: 1.6rem;
+  color: #f8f8f8;
+  background-color: #4d4339;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-top a:hover {
+  background-color: #f4b41a;
+  color: #2f4050;
+  cursor: pointer;
+}
+
+/* Opcional: ajustar tamaño en móviles */
+@media (max-width: 768px) {
+  .social-top {
+    top: 80px;      /* si tu navbar es más alto */
+    right: 20px;
+    gap: 12px;
+  }
+
+  .social-top a {
+    font-size: 1.4rem;
+    padding: 8px 10px;
+  }
+}
+
+
 /* Secciones comunes */
 .section {
   padding: 120px 20px 60px; /* deja espacio para navbar fijo */
@@ -526,6 +566,7 @@ html {
     font-size: 1rem;
   }
 }
+
 
 
 
