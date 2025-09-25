@@ -454,4 +454,15 @@ html {
     }
 }
 
+/* Ocultar INICIO, PROCESO, SERVICIOS, GALERIA, CONTACTOS solo en celular */
+@media screen and (max-width: 768px) {
+  .inicio,
+  .proceso,
+  .servicios,
+  .galeria,
+  .contactos {
+    display: none !important;
+  }
+}
+
 
