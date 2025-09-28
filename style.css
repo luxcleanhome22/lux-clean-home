@@ -13,7 +13,7 @@
   --gold: #f4b41a;
   --gold-dark: #d29c15;
   --white: #ffffff;
-  --muted: #777777;
+  --muted: #464646;
   --whatsapp: #25d366;
 }
 
@@ -270,11 +270,12 @@ a[href^="tel"]{ color:var(--white); text-decoration:none; }
   margin-top:14px;
   padding-left:18px;
 }
-.nosotros-section ol li{
-  margin-bottom:12px;
-  color:var(--muted);
-  font-family:'Lora', serif;
-  line-height:1.6;
+.nosotros-section ol li {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-family: 'Lora', serif;
+  font-size: 18px;       /* 👈 Tamaño fijo */
+  line-height: 1.6;      /* Altura entre líneas */
 }
 
 /* ===========================
@@ -559,6 +560,7 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
     margin-top: -70px; /* sube la imagen, puedes ajustar -20px, -30px, etc */
   }
 }
+
 
 
 
