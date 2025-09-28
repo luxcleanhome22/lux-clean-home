@@ -556,9 +556,10 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
 /* SOLO en celular */
 @media (max-width: 768px) {
   .home-section{   /* Cambia .hero-image por la clase de tu imagen principal */
-    margin-top: -40px; /* sube la imagen, puedes ajustar -20px, -30px, etc */
+    margin-top: -70px; /* sube la imagen, puedes ajustar -20px, -30px, etc */
   }
 }
+
 
 
 
