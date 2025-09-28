@@ -424,4 +424,34 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   .social-links-fixed{ display:none }
 }
 
+/* ===========================
+   Ajustes de tamaño de letra (especial para celular)
+   =========================== */
+@media (max-width: 768px) {
+  /* Texto debajo del título en HOME */
+  .home-content p {
+    font-size: 1.25rem; /* antes 1rem, ahora más grande */
+    line-height: 1.5;
+  }
+
+  /* Teléfono más grande */
+  .telefono {
+    font-size: 1.6rem; /* antes 1.25rem */
+    font-weight: 800;
+  }
+
+  /* Párrafo inicial del proceso (Nosotros) */
+  .texto-nosotros p {
+    font-size: 1.2rem; /* más grande que el default */
+    line-height: 1.6;
+  }
+
+  /* Lista del proceso */
+  .nosotros-section ol li {
+    font-size: 1.1rem; /* agranda ítems de la lista */
+    line-height: 1.6;
+  }
+}
+
+
 
