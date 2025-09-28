@@ -561,13 +561,28 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   }
 }
 
+/* Contenedor de la galería */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 20px; /* espacio entre imágenes */
+  justify-items: center; /* centra las imágenes */
+}
 
+/* Ajuste SOLO para celular */
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: 1fr; /* 1 columna (vertical) */
+    gap: 15px;
+  }
+}
 
-
-
-
-
-
-
+.galeria img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
 
 
