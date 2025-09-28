@@ -465,3 +465,12 @@ html {
   }
 }
 
+/* Centrar iconos sociales en móviles */
+@media (max-width: 768px) {
+  .social-links {
+    margin: 0 auto;           /* los centra */
+    justify-content: center;  /* alineación horizontal */
+  }
+}
+
+
