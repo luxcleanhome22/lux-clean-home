@@ -491,5 +491,12 @@ html {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .telefono {
+    color: white;  /* o green */
+  }
+}
+
+
 
 
