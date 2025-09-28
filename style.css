@@ -473,5 +473,16 @@ html {
   }
 }
 
+@media (max-width: 768px) {
+  .logo {
+    margin: 0 auto;       /* centra el bloque */
+    text-align: center;   /* centra el texto */
+  }
+
+  .navbar {
+    justify-content: center; /* para que no lo mande a la izquierda */
+  }
+}
+
 
 
