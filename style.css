@@ -479,6 +479,40 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   height: 35px;
 }
 
+/* Ajuste SOLO para PC */
+@media (min-width: 769px) {
+  .whatsapp-float {
+    width: 50px;   /* un poco más chico que en cel */
+    height: 50px;
+    bottom: 25px;
+    left: 25px;
+    animation: none; /* sin pulso en PC, más sobrio */
+  }
+
+  .whatsapp-float img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Ajuste SOLO para CELULAR */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 70px;   /* más grande para tocar con el dedo */
+    height: 70px;
+    bottom: 15px;
+    left: 15px;
+    animation: pulse 2s infinite; /* pulso llamativo */
+  }
+
+  .whatsapp-float img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
 /* Animación de parpadeo / pulso */
 @keyframes pulse {
   0% {
@@ -518,6 +552,7 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   width: 35px;
   height: 35px;
 }
+
 
 
 
