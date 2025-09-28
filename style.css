@@ -475,12 +475,19 @@ html {
 
 @media (max-width: 768px) {
   .logo {
-    margin: 0 auto;       /* centra el bloque */
-    text-align: center;   /* centra el texto */
+    margin: 0 auto;          /* centra el contenedor */
+    text-align: center;      /* centra el texto dentro */
+    flex-direction: column;  /* coloca imagen arriba y texto abajo */
   }
 
-  .navbar {
-    justify-content: center; /* para que no lo mande a la izquierda */
+  .logo-img {
+    display: block;
+    margin: 0 auto;          /* centra la imagen */
+  }
+
+  .logo-text {
+    display: block;
+    margin-top: 5px;         /* espacio entre imagen y texto */
   }
 }
 
