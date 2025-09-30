@@ -2,12 +2,7 @@
 <html lang="es">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lux Clean Home</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google tag (gtag.js) -->
+  <!-- Global site tag (gtag.js) - Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17595978547"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,11 +10,35 @@
     gtag('js', new Date());
     gtag('config', 'AW-17595978547');
   </script>
+
+  <!-- Event snippet for Contacto conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17595978547/_0a9CN2M26QbELOmtcZB',
+      'value': 1.0,
+      'currency': 'PEN',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lux Clean Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
     <!-- Fuentes elegantes -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Estilos CSS -->
-  <link rel="stylesheet" href="style.css">
 
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -48,7 +67,14 @@
       <ul class="social-links">
         <li><a href="https://www.instagram.com/luxcleanhome/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
         <li><a href="https://www.tiktok.com/@lux.clean.home" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
-        <li><a href="https://wa.me/51982218148" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+        <li>
+       <a href="https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio" 
+     target="_blank" 
+     class="btn whatsapp-btn-home"
+     onclick="return gtag_report_conversion('https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio');">
+      <i class="fab fa-whatsapp"></i> CONTÁCTANOS
+      </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -62,8 +88,11 @@
       <br>
       
       <!-- Botón de WhatsApp -->
-      <a href="https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio" target="_blank" class="btn whatsapp-btn-home">
-        <i class="fab fa-whatsapp"></i> CONTÁCTANOS
+      <a href="https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio" 
+     target="_blank" 
+     class="btn whatsapp-btn-home"
+     onclick="return gtag_report_conversion('https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio');">
+      <i class="fab fa-whatsapp"></i> CONTÁCTANOS
       </a>
     </div>
     
@@ -127,9 +156,12 @@
     <h2>Contáctanos</h2>
     <h3>Escríbenos por WhatsApp o llamanos directamente al <br> +51 982 218 148</h3>
     <br>
-    <a href="https://wa.me/51982218148?text=Hola%2C%20me%20interesa%20cotizar%20una%20limpieza%20con%20Lux%20Clean%20Home" target="_blank" class="btn whatsapp-btn">
-      <i class="fab fa-whatsapp"></i> CONTACTANOS
-    </a>
+    <a href="https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio" 
+     target="_blank" 
+     class="btn whatsapp-btn-home"
+     onclick="return gtag_report_conversion('https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio');">
+      <i class="fab fa-whatsapp"></i> CONTÁCTANOS
+      </a>
   </section>
 
   <!-- SCRIPT PARA EVITAR SCROLL AL RECARGAR -->
@@ -152,13 +184,17 @@
   </footer>
 
   <!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/51982218148" class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-</a>
+<a href="https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio" 
+     target="_blank" 
+     class="btn whatsapp-btn-home"
+     onclick="return gtag_report_conversion('https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio');">
+      <i class="fab fa-whatsapp"></i> CONTÁCTANOS
+      </a>
 
   
 </body>
 </html>
+
 
 
 
