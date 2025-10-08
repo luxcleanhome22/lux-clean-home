@@ -530,7 +530,7 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   .servicio-item{ min-height:unset; padding:20px }
 
   /* teléfono force color */
-  .telefono, a[href^="tel"]{ color:var(--white) !important; text-decoration:none }
+  .telefono, a[href^="tel"]{ color:var(--dark) !important; text-decoration:none }
 
   /* Ajustes botón */
   .btn, .whatsapp-btn-home, .whatsapp-btn{ padding:10px 22px; font-size:0.95rem }
@@ -685,6 +685,7 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
     margin-top: -130px; /* sube la imagen, puedes ajustar -20px, -30px, etc */
   }
 }
+
 
 
 
