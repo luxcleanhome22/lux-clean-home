@@ -493,7 +493,7 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   .logo-img{ height:56px }
 
   /* Ocultar los items del menu si quieres (mantengo tu regla) */
-  .inicio, .proceso, .servicios, .galeria, .contactos {
+  .inicio, .proceso, .servicios, .clientes, .contactos {
     display: none !important;
   }
 
@@ -512,8 +512,6 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   .servicios-grid{ grid-template-columns: 1fr; gap:16px; padding:0 6px }
   .servicio-item{ min-height:unset; padding:20px }
 
-  .galeria-grid{ gap:14px; padding:0 6px }
-
   /* teléfono force color */
   .telefono, a[href^="tel"]{ color:var(--white) !important; text-decoration:none }
 
@@ -528,7 +526,6 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   .nav-links li a{ font-size:0.95rem }
   .logo-img{ height:48px }
   .servicios-grid{ gap:12px }
-  .galeria-grid{ grid-template-columns: 1fr; }
 }
 
 /* Si en tu HTML usas .social-links-fixed: ocultarlo en móvil */
@@ -671,31 +668,6 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
     margin-top: -130px; /* sube la imagen, puedes ajustar -20px, -30px, etc */
   }
 }
-
-/* Contenedor de la galería */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  gap: 20px; /* espacio entre imágenes */
-  justify-items: center; /* centra las imágenes */
-}
-
-/* Ajuste SOLO para celular */
-@media (max-width: 768px) {
-  .galeria {
-    grid-template-columns: 1fr; /* 1 columna (vertical) */
-    gap: 15px;
-  }
-}
-
-.galeria img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  object-fit: cover;
-}
-
 
 
 
