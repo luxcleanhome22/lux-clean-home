@@ -532,16 +532,16 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
 /* Ajuste SOLO para CELULAR */
 @media (max-width: 768px) {
   .whatsapp-float {
-    width: 70px;   /* más grande para tocar con el dedo */
-    height: 70px;
-    bottom: 15px;
-    left: 15px;
+    width: 54px;   /* más grande para tocar con el dedo */
+    height: 54px;
+    bottom: 18px;
+    left: 18px;
     animation: pulse 2s infinite; /* pulso llamativo */
   }
 
   .whatsapp-float img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -617,6 +617,7 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   object-fit: cover;
 }
+
 
 
 
