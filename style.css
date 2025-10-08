@@ -157,7 +157,7 @@ html{scroll-behavior:smooth;font-family:'Poppins',system-ui,-apple-system,"Segoe
 .home-section{
   position:relative;
   background: url('fondo.jpg') center/cover no-repeat;
-  min-height:100vh;
+  min-height:70vh;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -617,6 +617,7 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   object-fit: cover;
 }
+
 
 
 
