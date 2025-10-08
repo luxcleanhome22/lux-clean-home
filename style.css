@@ -166,6 +166,13 @@ html{scroll-behavior:smooth;font-family:'Poppins',system-ui,-apple-system,"Segoe
   overflow:hidden;
 }
 
+/* En celulares (para que no se vea muy aplastado) */
+@media (max-width: 768px) {
+  .home-section {
+    min-height: 100vh;
+  }
+}
+
 /* Overlay sutil para mejorar contraste */
 .home-section::before{
   content:"";
@@ -617,6 +624,7 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   object-fit: cover;
 }
+
 
 
 
