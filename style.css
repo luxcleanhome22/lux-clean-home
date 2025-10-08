@@ -308,7 +308,7 @@ a[href^="tel"]{ color:var(--white); text-decoration:none; }
 
 .servicio-img {
   width: 100%;
-  height: 200px; /* puedes ajustar según la proporción de tus fotos */
+  height: 280px; /* puedes ajustar según la proporción de tus fotos */
   overflow: hidden;
 }
 
@@ -617,6 +617,7 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   object-fit: cover;
 }
+
 
 
 
