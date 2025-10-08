@@ -62,19 +62,47 @@ function gtag_report_conversion(url) {
   <li class="clientes"><a href="#clientes">Clientes</a></li>
 </ul>
 
-      <!-- Redes sociales -->
-      <ul class="social-links">
-        <li><a href="https://www.instagram.com/luxcleanhome/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://www.tiktok.com/@lux.clean.home" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
-        <li>
-       <a href="https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio" 
-     target="_blank" 
-     class="btn whatsapp-btn-home"
-     onclick="return gtag_report_conversion('https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio');">
-      <i class="fab fa-whatsapp"></i> CONTÁCTANOS
-      </a>
-        </li>
-      </ul>
+<!-- Redes sociales -->
+<ul class="social-links">
+  <li>
+    <a href="https://www.instagram.com/luxcleanhome/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </li>
+
+  <li>
+    <a href="https://www.tiktok.com/@lux.clean.home" target="_blank" aria-label="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </li>
+
+  <li>
+    <!-- Botón de llamada -->
+    <a id="callButton"
+       href="#"
+       class="btn whatsapp-btn-home">
+      <i class="fas fa-phone-alt"></i> LLÁMANOS: 936 458 906
+    </a>
+  </li>
+</ul>
+
+<script>
+  // Detecta si el usuario está en móvil
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const callButton = document.getElementById("callButton");
+
+  if (isMobile) {
+    // En celular → activa enlace de llamada
+    callButton.href = "tel:+51936458906";
+    callButton.setAttribute("onclick", "return gtag_report_conversion('tel:+51936458906');");
+  } else {
+    // En PC → desactiva acción del clic
+    callButton.addEventListener("click", function(event) {
+      event.preventDefault();
+    });
+  }
+</script>
+      
     </nav>
   </header>
   
@@ -187,7 +215,7 @@ function gtag_report_conversion(url) {
   <!-- CONTACTO -->
   <section id="contacto" class="section contacto-section">
     <h2>Contáctanos</h2>
-    <h3>Escríbenos por WhatsApp o llamanos directamente al <br> +51 982 218 148</h3>
+    <h3>Escríbenos por WhatsApp o llamanos directamente al <br> +51 936 458 906</h3>
     <br>
     <a href="https://wa.me/51982218148?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20limpieza%20a%20domicilio" 
      target="_blank" 
@@ -227,6 +255,7 @@ function gtag_report_conversion(url) {
   
 </body>
 </html>
+
 
 
 
