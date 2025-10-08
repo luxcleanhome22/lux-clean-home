@@ -686,14 +686,39 @@ a:focus, button:focus { outline: 3px solid rgba(36,118,110,0.15); outline-offset
   }
 }
 
+/* ===========================
+   BOTÓN DE LLAMADA
+   =========================== */
+.call-btn-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #007bff; /* azul profesional */
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Lora', sans-serif;
+}
 
+.call-btn-home i {
+  font-size: 18px;
+}
 
+/* Efecto hover (solo PC) */
+.call-btn-home:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
 
-
-
-
-
-
+/* Evita cambio de color automático en móviles */
+.call-btn-home[href^="tel"] {
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
 
 
 
